@@ -1,0 +1,1214 @@
+{
+  "rubric_id": "advice_compliance",
+  "rubric_version": "1.2",
+  "rubric_hash": "baec398d9fe9",
+  "reference": [
+    {
+      "case_id": "c01_isa_full_check",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "good",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c02_pushy_guarantee",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "absent",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "poor",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c03_good_but_no_fees",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "good",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c04_vague_risk_mention",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "partial",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c05_distressed_client_dismissed",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "insufficient_evidence",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "insufficient_evidence",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "poor",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c06_implied_safety",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "absent",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c07_thorough_brusque",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c08_too_short",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "insufficient_evidence",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "insufficient_evidence",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "insufficient_evidence",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c09_debt_no_investment",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "insufficient_evidence",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "good",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c10_fees_clear_no_affordability",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "good",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c11_cross_sell_pressure",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "insufficient_evidence",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "poor",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c12_good_risk_bad_promise",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c13_complete_and_patient",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "good",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c14_jargon_and_interrupting",
+      "judge": "human",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "partial",
+          "rationale": "",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "poor",
+          "rationale": "",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    }
+  ],
+  "rules": [
+    {
+      "case_id": "c01_isa_full_check",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "your outgoings"
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "0.75% a year"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "matched a declared pattern",
+          "evidence": "value can go down"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 1,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c02_pushy_guarantee",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "fail",
+          "rationale": "matched a declared pattern",
+          "evidence": "guarantee"
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "absent",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 2,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c03_good_but_no_fees",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "What are you paying out"
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "matched a declared pattern",
+          "evidence": "value can fall"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c04_vague_risk_mention",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "The charge is"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "partial",
+          "rationale": "matched a declared pattern",
+          "evidence": "risk"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c05_distressed_client_dismissed",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "your monthly income"
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "absent",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "poor",
+          "rationale": "matched a declared pattern",
+          "evidence": "As I already said"
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c06_implied_safety",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "your income"
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "fail",
+          "rationale": "matched a declared pattern",
+          "evidence": "Virtually no risk"
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "We charge"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "partial",
+          "rationale": "matched a declared pattern",
+          "evidence": "risk"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c07_thorough_brusque",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "Existing debts"
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "0.6% a year"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "matched a declared pattern",
+          "evidence": "get back less than you put in"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c08_too_short",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "absent",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c09_debt_no_investment",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "absent",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c10_fees_clear_no_affordability",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "0.8% a year"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "matched a declared pattern",
+          "evidence": "value can go down"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c11_cross_sell_pressure",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "we charge"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "partial",
+          "rationale": "matched a declared pattern",
+          "evidence": "risk"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c12_good_risk_bad_promise",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "your monthly income"
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "fail",
+          "rationale": "matched a declared pattern",
+          "evidence": "definitely be better off"
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "0.7% a year"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "matched a declared pattern",
+          "evidence": "get back less than you put in"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c13_complete_and_patient",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "fail",
+          "rationale": "matched a declared pattern",
+          "evidence": "could lose"
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "pass",
+          "rationale": "matched a declared pattern",
+          "evidence": "0.75% a year"
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "clear",
+          "rationale": "matched a declared pattern",
+          "evidence": "value can go down"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "acceptable",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    },
+    {
+      "case_id": "c14_jargon_and_interrupting",
+      "judge": "rules",
+      "rubric_hash": "baec398d9fe9",
+      "verdicts": [
+        {
+          "criterion_id": "affordability_checked",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "no_guaranteed_returns",
+          "level": "pass",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "fees_disclosed",
+          "level": "fail",
+          "rationale": "no pattern matched",
+          "evidence": ""
+        },
+        {
+          "criterion_id": "risk_explained",
+          "level": "partial",
+          "rationale": "matched a declared pattern",
+          "evidence": "risk"
+        },
+        {
+          "criterion_id": "tone_appropriate",
+          "level": "poor",
+          "rationale": "matched a declared pattern",
+          "evidence": "You're not listening"
+        }
+      ],
+      "latency_ms": 0,
+      "cost_usd": 0.0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "cached": false,
+      "error": null
+    }
+  ],
+  "model": []
+}

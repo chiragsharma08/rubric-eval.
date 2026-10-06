@@ -29,6 +29,62 @@ Two criteria a dozen lines of regex handles well enough to ship. One it cannot
 touch, because no keyword list assesses whether an adviser was patient with a
 worried client. That split is the finding, and you only get it by running both.
 
+### Read the real output without installing anything
+
+The committed output of that run, untouched:
+
+- **[sample_run/report.md](examples/advice_compliance/sample_run/report.md)** -
+  the agreement table, the per-criterion ship decision with its reasoning, cost
+  at volume, and a confusion matrix per criterion.
+- **[sample_run/review_queue.md](examples/advice_compliance/sample_run/review_queue.md)** -
+  every disagreement with the quoted evidence, the judge's reasoning, the
+  criterion text and the source excerpt, with tickboxes for whether the judge
+  was wrong, the reference was wrong, or the rubric is ambiguous.
+- **[sample_run/verdicts.json](examples/advice_compliance/sample_run/verdicts.json)** -
+  every raw verdict, so any number in the report can be recomputed.
+
+Worth opening the review queue on `c06_implied_safety / affordability_checked`.
+The rule marked it a pass by matching "your income" inside the *client's* line,
+"And what's your income question, do you need that?" The adviser never asked.
+The harness surfaced a false positive in its own baseline on the first run,
+which is the argument for running the cheap baseline alongside rather than
+instead.
+
+## How it works
+
+```
+cases.yaml ---+
+              |
+rubric.yaml --+--> Runner --> HumanJudge  --> reference verdicts
+              |         |
+              |         +--> RuleJudge   --> regex verdicts
+              |         |
+              |         +--> LLMJudge    --> model verdicts (xN repeats)
+              |                               |
+labels.yaml --+                               v
+                                     agreement.compare()
+                                  exact, kappa, bias, confusion
+                                            |
+                                            v
+                                        report.py
+                                  report.md + review_queue.md
+```
+
+1. **Load.** A rubric is YAML: an id, a version, and a list of criteria. Each
+   criterion has a question, an ordered list of levels, optional guidance for
+   the LLM, and optional regex rules for the baseline. Cases are YAML or a
+   directory of `.txt` files.
+2. **Score three ways.** The human labels, the regex baseline and the model all
+   produce the same `CaseVerdict` shape through the same `Judge` interface. Model
+   calls fan out concurrently under a semaphore and are cached by content hash.
+3. **Compare.** Each judge is measured against the reference per criterion:
+   exact agreement, Cohen's kappa, mean absolute distance on the level scale,
+   directional bias, and a confusion matrix. Abstains are excluded and counted.
+4. **Decide.** For each criterion the report recommends the model, the rule, or
+   a human, and states why in terms of the two thresholds in `report.py`.
+5. **Route the remainder.** Disagreements and abstains go to `review_queue.md`
+   as a worklist for a person.
+
 ## Quickstart
 
 ```bash
@@ -174,7 +230,11 @@ runner.py       loading, concurrent fan-out, content-addressed cache
 agreement.py    exact agreement, Cohen's kappa, bias, confusion, consistency
 report.py       report.md, review_queue.md, the ship/do-not-ship call
 cli.py          run (with model) and rules (no API key)
-examples/advice_compliance/   rubric, 14 synthetic cases, human labels
+examples/advice_compliance/
+  rubric.yaml        5 criteria, mixed on purpose
+  cases.yaml         14 synthetic conversations
+  human_labels.yaml  the reference labels
+  sample_run/        committed output of the rules baseline
 tests/          35 tests, no network
 ```
 
