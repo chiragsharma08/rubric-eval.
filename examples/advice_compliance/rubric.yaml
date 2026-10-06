@@ -1,0 +1,115 @@
+id: advice_compliance
+version: "1.2"
+description: >
+  Compliance review of a recorded financial guidance conversation. The criteria
+  are deliberately mixed: two of them a regex answers almost as well as a model,
+  two of them need judgement, and one is there to show what happens when you
+  point a keyword rule at something it cannot possibly measure.
+
+criteria:
+  - id: affordability_checked
+    question: >
+      Did the adviser establish the client's financial position, such as income,
+      outgoings or existing commitments, before recommending a course of action?
+    levels: [fail, pass]
+    guidance: >
+      Pass only if the adviser actually asked about or referred to the client's
+      specific circumstances. A generic "is this affordable for you?" with no
+      follow-up is a fail. If no recommendation was made at all, abstain.
+    rule_default: fail
+    rules:
+      - level: pass
+        any_of:
+          - "your (monthly )?(income|salary|take.?home)"
+          - "(what|how much) do you (earn|bring|take home)"
+          - "your outgoings"
+          - "monthly (budget|outgoings|commitments)"
+          - "what are you paying (out|each month)"
+          - "existing (debts?|commitments?|loans?)"
+
+  - id: no_guaranteed_returns
+    question: >
+      Did the adviser avoid promising, guaranteeing or implying a certain
+      financial outcome?
+    levels: [fail, pass]
+    guidance: >
+      Fail on explicit guarantees and on softer phrasing that amounts to one,
+      such as "you cannot lose" or "you will definitely be better off".
+      Describing historic performance accurately is not a guarantee.
+    rule_default: pass
+    rules:
+      - level: fail
+        any_of:
+          - "guarantee"
+          - "guaranteed"
+          - "risk.?free"
+          - "(can|could|cannot|can't|couldn't) ?n?o?t? lose"
+          - "no risk at all"
+          - "virtually no risk"
+          - "definitely be better off"
+          - "assured return"
+
+  - id: fees_disclosed
+    question: Did the adviser state the fees, charges or commission that apply?
+    levels: [fail, pass]
+    guidance: >
+      Pass if a fee, charge, commission or platform cost was named, whether as a
+      percentage or an amount. "There may be charges" without any figure or
+      named charge is a fail.
+    rule_default: fail
+    rules:
+      - level: pass
+        any_of:
+          - "\\d+(\\.\\d+)?\\s?% ?(a year|per year|per annum|annually)"
+          - "(our|the|a|an) (advice |annual |platform |ongoing )?(fee|charge)s? (is|are|of|comes)"
+          - "we charge"
+          - "commission of"
+          - "costs? you £\\d"
+          - "£\\d+ (set.?up|arrangement|advice) fee"
+
+  - id: risk_explained
+    question: >
+      Was the risk to the client's capital explained, and how completely?
+    levels: [absent, partial, clear]
+    guidance: >
+      clear: the adviser said capital can fall in value or that the client could
+      get back less than they put in, in plain language.
+      partial: risk was referred to but not explained, or was mentioned and then
+      immediately minimised.
+      absent: no mention of risk.
+      Abstain if the conversation involved no product that carries capital risk.
+    rule_default: absent
+    rules:
+      - level: clear
+        any_of:
+          - "(value|investments?) can (go down|fall)"
+          - "get back less than you (put in|invest)"
+          - "capital (is )?at risk"
+          - "you could lose (some|part|money)"
+      - level: partial
+        any_of:
+          - "risk"
+          - "volatil"
+
+  - id: tone_appropriate
+    question: >
+      Was the client treated with patience and respect, particularly where they
+      expressed worry, confusion or financial difficulty?
+    levels: [poor, acceptable, good]
+    guidance: >
+      good: the adviser acknowledged the client's position and adjusted their
+      explanation to it.
+      acceptable: businesslike, nothing wrong with it.
+      poor: dismissive, interrupting, pressuring, or answering a worry with a
+      sales line.
+    # The rule here is honest about being hopeless: nothing rude was said, so it
+    # returns "acceptable" for everything. Reported next to the model, that
+    # produces a near-zero kappa, which is the correct answer to "can a keyword
+    # rule assess tone?" and the reason this criterion is in the example.
+    rule_default: acceptable
+    rules:
+      - level: poor
+        any_of:
+          - "calm down"
+          - "as I already said"
+          - "you're not listening"

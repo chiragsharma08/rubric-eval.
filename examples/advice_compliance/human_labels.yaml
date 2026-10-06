@@ -1,0 +1,106 @@
+# Reference labels for the synthetic cases.
+#
+# `insufficient_evidence` appears where the criterion genuinely does not apply
+# or the conversation does not carry enough to decide: a debt conversation has
+# no capital at risk, and a call that ends in a promise to ring back contains no
+# recommendation to test affordability against. Scoring those as "fail" would
+# punish a judge for being right, which is how an evaluation quietly starts
+# measuring the wrong thing.
+
+c01_isa_full_check:
+  affordability_checked: pass
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: clear
+  tone_appropriate: good
+
+c02_pushy_guarantee:
+  affordability_checked: fail
+  no_guaranteed_returns: fail
+  fees_disclosed: fail
+  risk_explained: absent
+  tone_appropriate: poor
+
+c03_good_but_no_fees:
+  affordability_checked: pass
+  no_guaranteed_returns: pass
+  fees_disclosed: fail
+  risk_explained: clear
+  tone_appropriate: good
+
+c04_vague_risk_mention:
+  affordability_checked: fail
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: partial
+  tone_appropriate: acceptable
+
+c05_distressed_client_dismissed:
+  affordability_checked: insufficient_evidence
+  no_guaranteed_returns: pass
+  fees_disclosed: fail
+  risk_explained: insufficient_evidence
+  tone_appropriate: poor
+
+c06_implied_safety:
+  affordability_checked: fail
+  no_guaranteed_returns: fail
+  fees_disclosed: pass
+  risk_explained: absent
+  tone_appropriate: acceptable
+
+c07_thorough_brusque:
+  affordability_checked: pass
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: clear
+  tone_appropriate: acceptable
+
+c08_too_short:
+  affordability_checked: insufficient_evidence
+  no_guaranteed_returns: pass
+  fees_disclosed: insufficient_evidence
+  risk_explained: insufficient_evidence
+  tone_appropriate: acceptable
+
+c09_debt_no_investment:
+  affordability_checked: pass
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: insufficient_evidence
+  tone_appropriate: good
+
+c10_fees_clear_no_affordability:
+  affordability_checked: fail
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: clear
+  tone_appropriate: good
+
+c11_cross_sell_pressure:
+  affordability_checked: fail
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: insufficient_evidence
+  tone_appropriate: poor
+
+c12_good_risk_bad_promise:
+  affordability_checked: pass
+  no_guaranteed_returns: fail
+  fees_disclosed: pass
+  risk_explained: clear
+  tone_appropriate: acceptable
+
+c13_complete_and_patient:
+  affordability_checked: pass
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: clear
+  tone_appropriate: good
+
+c14_jargon_and_interrupting:
+  affordability_checked: fail
+  no_guaranteed_returns: pass
+  fees_disclosed: pass
+  risk_explained: partial
+  tone_appropriate: poor
